@@ -15,6 +15,7 @@
 <template>
     <h2>Contador global: {{ store.state.contador }}</h2>
     <h3>Doble del contador: {{ store.getters.dobleContador }}</h3>
+    <h3>Mensaje: {{ store.state.saludo }}</h3>
 </template>
 
 <script setup>

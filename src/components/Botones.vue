@@ -1,6 +1,9 @@
 <template>
-    <button @click="sumar">Incrementar Contador</button>
+    <h3>Mensaje: {{ store.state.saludo }}</h3>
+
+    <button @click="sumar">Incrementar Contador inmediato</button>
     <button @click="restar">Decrementar Contador</button>
+    <button @click="sumarAsync">Incrementar contador despues de 3 segundos</button>
 </template>
 
 <script setup>
@@ -14,6 +17,10 @@
 
     const restar = () => {
         store.commit('decrementar')
+    }
+
+    const sumarAsync = () => {
+        store.dispatch('incrementarAsync')
     }
 </script>
 

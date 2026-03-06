@@ -1,11 +1,16 @@
 <template>
+  <h1>{{ store.state.saludo }}</h1>
+
   <MostrarContador />
-  <BotonSumar />
+  <Botones />
 </template>
 
 <script setup>
-import BotonSumar from './components/BotonSumar.vue';
+import Botones from './components/Botones.vue';
 import MostrarContador from './components/MostrarContador.vue';
+import { useStore } from 'vuex';
+
+    const store = useStore()
 
 </script>
 

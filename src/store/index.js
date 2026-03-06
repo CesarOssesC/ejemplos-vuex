@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 export const store = createStore({
     state() {
         return {
-            contador: 1
+            contador: 1,
+            saludo: "Hola desde vuex"
         }
     },
     mutations : {
@@ -17,6 +18,13 @@ export const store = createStore({
     getters: {
         dobleContador(state) {
             return state.contador * 2
+        }
+    },
+    actions: {
+        incrementarAsync({ commit }) {
+            setTimeout(() => {
+                commit('incrementar')
+            }, 3000)
         }
     }
 })
